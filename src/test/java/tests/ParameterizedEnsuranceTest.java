@@ -2,6 +2,7 @@ package tests;
 
 import static org.junit.Assert.assertEquals;
 
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Collection;
 
@@ -25,8 +26,9 @@ public class ParameterizedEnsuranceTest extends BaseTest{
 
 	@ParameterizedTest
 	@MethodSource("getCollection")
-	public void test(int indexBrand, int indexModel) throws InterruptedException {
+	public void ensuranceRegisterTest(int indexBrand, int indexModel) throws InterruptedException, IOException {
 		ensurance.registerEnsurance(indexBrand, indexModel);
 		assertEquals("https://hello.friday.de/quote/enterBirthDate", page.getURL());
+		page.takeScreenshot(String.valueOf(indexBrand) + String.valueOf(indexModel), "funnel");
 	}
 }
