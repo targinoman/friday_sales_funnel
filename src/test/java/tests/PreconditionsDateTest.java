@@ -2,6 +2,7 @@ package tests;
 
 import static org.junit.Assert.assertEquals;
 
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Collection;
 
@@ -26,8 +27,9 @@ public class PreconditionsDateTest extends BaseTest{
 	
 	@ParameterizedTest
 	@MethodSource("getCollection")
-	public void setEnsuranceDateTest(String date, String errorMessage) {		
+	public void setEnsuranceDateTest(String date, String errorMessage) throws IOException {		
 		precondition.setEnsuranceDate(date);
 		assertEquals(errorMessage, precondition.getErrorMessage());
+		page.takeScreenshot(date + "_", errorMessage.substring(13, 44));
 	}
 }
