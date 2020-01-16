@@ -1,4 +1,4 @@
-package date;
+package tests;
 
 import static org.junit.Assert.assertEquals;
 
