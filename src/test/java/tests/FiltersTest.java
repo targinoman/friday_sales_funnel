@@ -12,9 +12,9 @@ import pages.BrandsPage;
 import pages.ModelsPage;
 
 /**
- * This class is used to test Brands and Models Filter
- * All screenshots are saved on target/screenshots
- *  
+ * This class is used to test Brands and Models Filter All screenshots are saved
+ * on target/screenshots
+ * 
  * @author rstargino
  * 
  **/
@@ -30,6 +30,7 @@ public class FiltersTest extends BaseTest {
 
 	@Test
 	public void brandsFilterTest() throws IOException {
+
 		String expectedBrand = "Corvette";
 		brands.typeBrand(expectedBrand);
 		String filteredBrand = brands.getFilteredBrand();
@@ -42,6 +43,7 @@ public class FiltersTest extends BaseTest {
 
 	@Test
 	public void brandsFilterErrorTest() throws IOException {
+
 		brands.typeBrand("Xunda");
 		assertEquals("Diese Marke ist uns nicht bekannt. Bitte überprüfe deine Eingabe.", brands.getErrorBrands());
 		page.takeScreenshot("brandFilter", "_NotSuccess");
@@ -52,6 +54,7 @@ public class FiltersTest extends BaseTest {
 
 	@Test
 	public void modelsFilterTest() throws InterruptedException, IOException {
+
 		String expectedModel = "Spider";
 		models.typeModel("Alfa Romeo", expectedModel);
 		String actualModel = models.getFilteredModel();
@@ -61,9 +64,10 @@ public class FiltersTest extends BaseTest {
 
 	// This method will test if typing a word that is not on the models' list will
 	// return the correct error message
-	
+
 	@Test
 	public void modelsFilterErrorTest() throws InterruptedException, IOException {
+
 		models.typeModel("VW", "Mopa");
 		assertEquals("Dieses Modell ist uns nicht bekannt. Bitte überprüfe deine Eingabe.", models.getErrorModels());
 		page.takeScreenshot("modelFilter", "_NotSuccess");

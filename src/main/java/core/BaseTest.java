@@ -12,7 +12,7 @@ import org.junit.jupiter.api.BeforeEach;
  **/
 
 public abstract class BaseTest {
-
+	
 	@BeforeEach
 	public void setup() {
 		DriverFactory.getDriver().get("https://hello.friday.de/quote/selectPrecondition");
@@ -24,5 +24,5 @@ public abstract class BaseTest {
 			DriverFactory.killDriver();
 		}
 	}
-
+	
 }
