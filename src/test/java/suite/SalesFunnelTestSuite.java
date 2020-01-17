@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 
 /**
  * This class is used to run all test classes
+ * All screenshots are saved on target/screenshots
  * 
  * @author rstargino
  * 

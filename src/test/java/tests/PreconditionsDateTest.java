@@ -16,6 +16,7 @@ import pages.PreconditionsPage;
 /**
  * This class is used to test the input field that asks for the date of
  * insurance coverage
+ * All screenshots are saved on target/screenshots
  * 
  * @author rstargino
  * 

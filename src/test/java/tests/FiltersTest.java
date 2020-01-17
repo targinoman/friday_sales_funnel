@@ -13,7 +13,8 @@ import pages.ModelsPage;
 
 /**
  * This class is used to test Brands and Models Filter
- * 
+ * All screenshots are saved on target/screenshots
+ *  
  * @author rstargino
  * 
  **/

@@ -15,6 +15,7 @@ import pages.InsuranceRegister;
 
 /**
  * This class is used to test Friday's sales funnel
+ * All screenshots are saved on target/screenshots
  * 
  * @author rstargino
  * 
