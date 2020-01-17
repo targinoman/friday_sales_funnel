@@ -11,8 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
- * Esta classe tem a função de atribuir linguagem de alto nível aos métodos do
- * Selenium
+ * This class is used to give a more approachable syntax to Selenium methods 
  * 
  * @author rstargino
  * 

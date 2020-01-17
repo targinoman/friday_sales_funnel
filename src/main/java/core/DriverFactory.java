@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 /**
- * Classe com instância estática do WebDriver para que seja utilizado apenas um na execução dos testes
+ * This class has a static WebDriver instance so that only one is used while tests are running
  * 
  * @author rstargino
  * 

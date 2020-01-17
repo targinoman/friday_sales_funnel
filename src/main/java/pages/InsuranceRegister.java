@@ -2,7 +2,7 @@ package pages;
 
 import core.BasePage;
 
-public class EnsuranceRegister {
+public class InsuranceRegister {
 
 	BasePage page = new BasePage();
 	BrandsPage brands = new BrandsPage();

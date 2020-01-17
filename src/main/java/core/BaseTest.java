@@ -4,8 +4,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 
 /**
- * Esta superclasse contém métodos que serão utilizados por todas as classes de
- * testes como @Before e @After escrita e leitura de arquivos
+ * This superclass has methods that will be used for all other
+ * test classes
  * 
  * @author rstargino
  * 
