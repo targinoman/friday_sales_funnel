@@ -5,6 +5,7 @@ import org.junit.platform.suite.api.SelectPackages;
 import org.junit.platform.suite.api.SuiteDisplayName;
 import org.junit.runner.RunWith;
 
+
 /**
  * This class is used to run all test classes
  * All screenshots are saved on target/screenshots
@@ -16,6 +17,7 @@ import org.junit.runner.RunWith;
 @RunWith(JUnitPlatform.class)
 @SuiteDisplayName("Friday Sales Funnel Test Suite")
 @SelectPackages("tests")
+
 public class SalesFunnelTestSuite {
 
 }

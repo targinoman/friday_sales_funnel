@@ -1,6 +1,6 @@
 package tests;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -35,6 +35,7 @@ public class ParameterizedInsuranceTest extends BaseTest {
 	// This method will test the sales funnel using 3 brands and 3 models of each
 	// brand, stopping on the Date Of Birthday page as requested
 
+	
 	@ParameterizedTest
 	@MethodSource("getCollection")
 	public void ensuranceRegisterTest(int indexBrand, int indexModel) throws InterruptedException, IOException {
