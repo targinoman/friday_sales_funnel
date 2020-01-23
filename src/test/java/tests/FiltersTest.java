@@ -7,7 +7,10 @@ import java.io.IOException;
 import org.junit.jupiter.api.Test;
 
 import core.BasePage;
-import core.BaseTest;
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import pages.BrandsPage;
 import pages.ModelsPage;
 
@@ -29,6 +32,9 @@ public class FiltersTest extends BaseTest {
 	// on the search
 
 	@Test
+	@Severity(SeverityLevel.NORMAL)
+	@Description("Test Case Description: To Verify if the search feature returns the typed brand")
+	@Story("Story Name: Search Brand")
 	public void brandsFilterTest() throws IOException {
 
 		String expectedBrand = "Corvette";
@@ -42,6 +48,9 @@ public class FiltersTest extends BaseTest {
 	// return the correct error message
 
 	@Test
+	@Severity(SeverityLevel.NORMAL)
+	@Description("Test Case Description: To Verify if the search feature returns correct error message when a brand is not found")
+	@Story("Story Name: Search Brand")
 	public void brandsFilterErrorTest() throws IOException {
 
 		brands.typeBrand("Xunda");
@@ -53,6 +62,9 @@ public class FiltersTest extends BaseTest {
 	// brand Alfa Romeo and types this model on the search
 
 	@Test
+	@Severity(SeverityLevel.NORMAL)
+	@Description("Test Case Description: To Verify if the search feature returns the typed model")
+	@Story("Story Name: Search Model")
 	public void modelsFilterTest() throws InterruptedException, IOException {
 
 		String expectedModel = "Spider";
@@ -66,6 +78,9 @@ public class FiltersTest extends BaseTest {
 	// return the correct error message
 
 	@Test
+	@Severity(SeverityLevel.NORMAL)
+	@Description("Test Case Description: To Verify if the search feature returns correct error message when a model is not found")
+	@Story("Story Name: Search Model")
 	public void modelsFilterErrorTest() throws InterruptedException, IOException {
 
 		models.typeModel("VW", "Mopa");

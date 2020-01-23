@@ -1,6 +1,7 @@
 package pages;
 
 import core.BasePage;
+import io.qameta.allure.Step;
 
 public class InsuranceRegister {
 
@@ -8,6 +9,7 @@ public class InsuranceRegister {
 	BrandsPage brands = new BrandsPage();
 	ModelsPage models = new ModelsPage();
 	
+	@Step("Navigate through screens and selecting desired options")
 	public void registerEnsurance(int indexBrand, int indexModel) throws InterruptedException {
 		page.clickButtonClass("Button__style_primary--1-CZ1");
 		page.clickButtonClass("Button__style_primary--1-CZ1");

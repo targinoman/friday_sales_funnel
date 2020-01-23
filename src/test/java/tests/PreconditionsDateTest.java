@@ -8,7 +8,10 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import core.BasePage;
-import core.BaseTest;
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import pages.PreconditionsPage;
 
 /**
@@ -38,6 +41,9 @@ public class PreconditionsDateTest extends BaseTest {
 	@ParameterizedTest
 //	@MethodSource("getCollection")
 	@CsvSource({"22081985,Hups! Dieses Datum liegt in der Vergangenheit. Bitte überprüfe deine Eingabe.", "22082035,Hups! Dieses Datum liegt zu weit in der Zukunft. Bitte überprüfe deine Eingabe."})
+	@Severity(SeverityLevel.NORMAL)
+	@Description("Test Case Description: Typing an insurance start date in the past and in the future and getting error messages")
+	@Story("Story Name: Insurance Start Date of Coverage")
 	public void setEnsuranceDateTest(String date, String errorMessage) throws IOException {
 		precondition.setInsuranceDate(date);
 		assertEquals(errorMessage, precondition.getErrorMessage());

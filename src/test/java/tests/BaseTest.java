@@ -1,7 +1,10 @@
-package core;
+package tests;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+
+import core.DriverFactory;
+import core.Propriedades;
 
 /**
  * This superclass has methods that will be used for all other

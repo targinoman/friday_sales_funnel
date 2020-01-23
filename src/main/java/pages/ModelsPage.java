@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 
 import core.BasePage;
 import core.DriverFactory;
+import io.qameta.allure.Step;
 
 /**
  * This class is used to manipulate operations on the selectModel page 
@@ -19,7 +20,7 @@ import core.DriverFactory;
 public class ModelsPage extends BasePage {
 
 	//This method returns all the models that can be selected on the page
-	
+	@Step("Capturing all clickable models")
 	public ArrayList<WebElement> getModels(String className) {
 		ArrayList<WebElement> models = (ArrayList<WebElement>) DriverFactory.getDriver()
 				.findElements(By.className(className));
@@ -27,7 +28,7 @@ public class ModelsPage extends BasePage {
 	}
 
 	//Based on the previous method this one is used to click on the selected model
-	
+	@Step("Clicking on the desired model: {0}")
 	public void selectModel(int index) {
 		ArrayList<WebElement> modelsButtons = this.getModels("SingleClickListField__button--3UZuT");
 		WebElement model = modelsButtons.get(index);
@@ -35,7 +36,7 @@ public class ModelsPage extends BasePage {
 	}
 
 	//This method is used to type a desired model on the search field
-	
+	@Step("Typing desired model on the search field:  {0}")
 	public void typeModel(String searchBrand, String searchModel) throws InterruptedException {
 		BrandsPage brand = new BrandsPage();
 		brand.typeBrand(searchBrand);
@@ -46,7 +47,7 @@ public class ModelsPage extends BasePage {
 	}
 	
 	//This method is used to get the searched model
-
+	@Step("Capturing the typed model")
 	public String getFilteredModel() {
 		String filteredModel = DriverFactory.getDriver()
 				.findElement(By.className("SingleClickListField__button--3UZuT")).getText();
@@ -54,7 +55,7 @@ public class ModelsPage extends BasePage {
 	}
 	
 	//This method is used to capture the error message in case of the brand typed is not found
-	
+	@Step("Capturing error message when typed model was not found")
 	public String getErrorModels() {
 		String errorMessage = DriverFactory.getDriver().findElement(By.className("HelpText__helpText--2dQU6")).getText();
 		return errorMessage;

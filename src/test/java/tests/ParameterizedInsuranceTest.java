@@ -10,7 +10,10 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import core.BasePage;
-import core.BaseTest;
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 import pages.InsuranceRegister;
 
 /**
@@ -38,6 +41,9 @@ public class ParameterizedInsuranceTest extends BaseTest {
 	
 	@ParameterizedTest
 	@MethodSource("getCollection")
+	@Severity(SeverityLevel.NORMAL)
+	@Description("Test Case Description: Navigate through screens selecting coverage characteristics until date of birthday")
+	@Story("Story Name: Insurance Application")
 	public void ensuranceRegisterTest(int indexBrand, int indexModel) throws InterruptedException, IOException {
 		ensurance.registerEnsurance(indexBrand, indexModel);
 		assertEquals("https://hello.friday.de/quote/enterBirthDate", page.getURL());
